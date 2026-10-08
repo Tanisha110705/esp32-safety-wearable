@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="580" viewBox="0 0 940 580" role="img" aria-label="ESP32 Safety Wearable - System Architecture">
+<title>ESP32 Safety Wearable - System Architecture</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f3f46"/></marker></defs>
+<rect width="940" height="580" fill="#ffffff"/>
+<text x="20" y="30" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18181b">ESP32 Safety Wearable - System Architecture</text>
+<rect x="30" y="70" width="210" height="64" rx="8" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="1.6"/>
+<text x="135.0" y="99.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">ECG front end</text>
+<text x="135.0" y="115.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">analog waveform + lead-off</text>
+<rect x="30" y="160" width="210" height="64" rx="8" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="1.6"/>
+<text x="135.0" y="189.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">GSR sensor</text>
+<text x="135.0" y="205.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">analog skin-conductance signal</text>
+<rect x="30" y="250" width="210" height="64" rx="8" fill="#e8f1fb" stroke="#2b6cb0" stroke-width="1.6"/>
+<text x="135.0" y="279.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">PIR sensor</text>
+<text x="135.0" y="295.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">digital motion output</text>
+<rect x="30" y="390" width="210" height="64" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="135.0" y="419.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Panic button</text>
+<text x="135.0" y="435.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">momentary, active-low</text>
+<rect x="290" y="50" width="370" height="470" rx="8" fill="#f4f4f5" stroke="#3f3f46" stroke-width="1.6"/>
+<text x="475.0" y="290.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle"></text>
+<text x="475" y="76" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#18181b" text-anchor="middle">ESP32</text>
+<rect x="310" y="95" width="150" height="230" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="385.0" y="159.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#18181b" text-anchor="middle">Acquisition</text>
+<text x="385.0" y="175.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">ECG: ADC 250 Hz</text>
+<text x="385.0" y="191.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">GSR: ADC 20 Hz</text>
+<text x="385.0" y="207.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">+ EMA filter</text>
+<text x="385.0" y="223.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">PIR: GPIO poll</text>
+<text x="385.0" y="239.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle"></text>
+<text x="385.0" y="255.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">15 s resting</text>
+<text x="385.0" y="271.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">baseline capture</text>
+<rect x="490" y="95" width="150" height="100" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="565.0" y="126.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#18181b" text-anchor="middle">Conditions</text>
+<text x="565.0" y="142.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">ECG rate rise</text>
+<text x="565.0" y="158.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">GSR deviation</text>
+<text x="565.0" y="174.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">PIR recent motion</text>
+<rect x="490" y="225" width="150" height="130" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="565.0" y="255.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#18181b" text-anchor="middle">Decision engine</text>
+<text x="565.0" y="271.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">2 of 3 -&gt; WARNING</text>
+<text x="565.0" y="287.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">3 of 3 for 10 s</text>
+<text x="565.0" y="303.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">-&gt; EMERGENCY</text>
+<text x="565.0" y="319.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">latched until</text>
+<text x="565.0" y="335.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">cancelled</text>
+<rect x="310" y="390" width="150" height="64" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="385.0" y="419.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#18181b" text-anchor="middle">Button tracker</text>
+<text x="385.0" y="435.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">debounce + hold timer</text>
+<path d="M 240,102 L 310,102" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 240,192 L 310,192" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 240,282 L 310,282" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 240,422 L 310,422" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 460,145 L 490,145" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 565,195 L 565,225" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 460,422 L 565,422 L 565,355" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="512" y="440" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">panic / cancel</text>
+<rect x="720" y="90" width="190" height="80" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="815.0" y="127.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Status LEDs</text>
+<text x="815.0" y="143.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">green / yellow / red</text>
+<rect x="720" y="230" width="190" height="64" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="815.0" y="259.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Wi-Fi (STA)</text>
+<text x="815.0" y="275.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">HTTP(S) POST, JSON</text>
+<rect x="720" y="340" width="190" height="64" rx="8" fill="#ffffff" stroke="#71717a" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="815.0" y="369.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Notification endpoint</text>
+<text x="815.0" y="385.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">user-provided service</text>
+<rect x="720" y="440" width="190" height="64" rx="8" fill="#ffffff" stroke="#71717a" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="815.0" y="469.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Emergency contact</text>
+<text x="815.0" y="485.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">SMS / chat / call</text>
+<path d="M 640,250 L 675,250 L 675,130 L 720,130" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="682" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="start">LED state</text>
+<path d="M 640,300 L 698,300 L 698,272 L 720,272" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="690" y="318" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="start">EMERGENCY</text>
+<path d="M 815,294 L 815,340" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 815,404 L 815,440" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+<text x="860" y="530" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#71717a" text-anchor="middle" font-style="italic">outside the device</text>
+<text x="20" y="568" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#71717a" font-style="italic">Conceptual diagram of the reference firmware in this repository - not captured data or a photo of the original prototype.</text>
+</svg>

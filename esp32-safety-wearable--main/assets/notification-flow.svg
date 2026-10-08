@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="780" viewBox="0 0 880 780" role="img" aria-label="Emergency Notification Flow (src/main.cpp)">
+<title>Emergency Notification Flow (src/main.cpp)</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f3f46"/></marker></defs>
+<rect width="880" height="780" fill="#ffffff"/>
+<text x="20" y="30" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18181b">Emergency Notification Flow (src/main.cpp)</text>
+<rect x="130" y="55" width="300" height="54" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="280.0" y="79.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">State enters EMERGENCY</text>
+<text x="280.0" y="95.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">manual or automatic</text>
+<rect x="130" y="135" width="300" height="44" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="280.0" y="162.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">alertPending = true, attempts = 0</text>
+<polygon points="280,205.0 400.0,245 280,285.0 160.0,245" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="280" y="249" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#18181b" text-anchor="middle">Wi-Fi connected?</text>
+<rect x="130" y="320" width="300" height="70" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="280.0" y="344.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Build JSON payload</text>
+<text x="280.0" y="360.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">device, trigger, ecg_bpm,</text>
+<text x="280.0" y="376.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">gsr_deviation, pir_recent, uptime_ms</text>
+<rect x="130" y="420" width="300" height="70" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="280.0" y="444.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">HTTP(S) POST to NOTIFY_URL</text>
+<text x="280.0" y="460.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">5 s timeout, optional Bearer token</text>
+<text x="280.0" y="476.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">(sampling pauses during request)</text>
+<polygon points="280,515.0 390.0,550 280,585.0 170.0,550" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="280" y="554" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#18181b" text-anchor="middle">HTTP 2xx?</text>
+<rect x="130" y="625" width="300" height="54" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="280.0" y="649.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Delivered</text>
+<text x="280.0" y="665.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">red LED solid, no more attempts</text>
+<path d="M 280,109 L 280,135" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 280,179 L 280,205" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 280,285 L 280,320" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="302" y="307" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">yes</text>
+<path d="M 280,390 L 280,420" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 280,490 L 280,515" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 280,585 L 280,625" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="302" y="610" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">yes</text>
+<rect x="560" y="400" width="280" height="70" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="700.0" y="424.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Wait NOTIFY_RETRY_MS (10 s)</text>
+<text x="700.0" y="440.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">red LED fast blink;</text>
+<text x="700.0" y="456.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">retry until delivered or cancelled</text>
+<path d="M 390,550 L 700,550 L 700,470" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="560" y="542" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">no / timeout</text>
+<path d="M 400,245 L 620,245 L 620,400" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="500" y="237" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">no</text>
+<path d="M 780,400 L 780,195 L 320,195 L 320,213" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+<text x="790" y="300" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="start">retry</text>
+<rect x="560" y="610" width="280" height="70" rx="8" fill="#ffffff" stroke="#71717a" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="700.0" y="634.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Endpoint -&gt; emergency contact</text>
+<text x="700.0" y="650.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">outside this firmware;</text>
+<text x="700.0" y="666.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">not part of this repository</text>
+<path d="M 430,455 L 520,455 L 520,645 L 560,645" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)" stroke-dasharray="6 4"/>
+<text x="20" y="715" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#52525b" text-anchor="start">Wi-Fi reconnection runs independently in maintainWifi(): a new attempt every 10 s while disconnected.</text>
+<text x="20" y="735" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#52525b" text-anchor="start">Cancelling an emergency stops retries but does not send a 'cancelled' message.</text>
+<text x="20" y="768" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#71717a" font-style="italic">Conceptual diagram of the reference firmware in this repository - not captured data or a photo of the original prototype.</text>
+</svg>

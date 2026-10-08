@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="760" viewBox="0 0 880 760" role="img" aria-label="Panic Button Flow (include/button.h)">
+<title>Panic Button Flow (include/button.h)</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f3f46"/></marker></defs>
+<rect width="880" height="760" fill="#ffffff"/>
+<text x="20" y="30" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18181b">Panic Button Flow (include/button.h)</text>
+<rect x="120" y="55" width="280" height="54" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="260.0" y="79.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Button pressed</text>
+<text x="260.0" y="95.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">GPIO13 pulled LOW (INPUT_PULLUP)</text>
+<rect x="120" y="140" width="280" height="54" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="260.0" y="164.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Debounce</text>
+<text x="260.0" y="180.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">level stable for 50 ms</text>
+<rect x="120" y="225" width="280" height="54" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="260.0" y="249.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Start hold timer</text>
+<text x="260.0" y="265.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">remember: was state EMERGENCY?</text>
+<polygon points="260,305.0 390.0,345 260,385.0 130.0,345" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="260" y="341" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#18181b" text-anchor="middle">Press started in</text>
+<text x="260" y="357" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#18181b" text-anchor="middle">EMERGENCY?</text>
+<polygon points="260,430.0 370.0,465 260,500.0 150.0,465" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="260" y="469" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#18181b" text-anchor="middle">Held &gt;= 1.5 s?</text>
+<rect x="120" y="540" width="280" height="54" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="260.0" y="564.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Panic event</text>
+<text x="260.0" y="580.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">-&gt; EMERGENCY (manual)</text>
+<rect x="120" y="620" width="280" height="60" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="260.0" y="639.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Alert POST + red LED</text>
+<text x="260.0" y="655.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">fast blink until HTTP 2xx,</text>
+<text x="260.0" y="671.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">then solid</text>
+<path d="M 260,109 L 260,140" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 260,194 L 260,225" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 260,279 L 260,305" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M 260,385 L 260,430" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="278" y="412" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">no</text>
+<path d="M 260,500 L 260,540" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="282" y="525" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">yes</text>
+<path d="M 260,594 L 260,620" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<polygon points="640,430.0 750.0,465 640,500.0 530.0,465" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="640" y="469" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#18181b" text-anchor="middle">Held &gt;= 5 s?</text>
+<path d="M 390,345 L 640,345 L 640,430" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="520" y="337" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">yes</text>
+<rect x="500" y="540" width="280" height="54" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="640.0" y="564.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Cancel event</text>
+<text x="640.0" y="580.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">-&gt; NORMAL, alert retries stop</text>
+<path d="M 640,500 L 640,540" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="662" y="525" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">yes</text>
+<rect x="500" y="225" width="280" height="54" rx="8" fill="#ffffff" stroke="#3f3f46" stroke-width="1.6"/>
+<text x="640.0" y="249.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">Released early</text>
+<text x="640.0" y="265.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">no event (short tap ignored)</text>
+<path d="M 370,465 L 440,465 L 440,262 L 500,262" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="420" y="455" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">no</text>
+<path d="M 750,465 L 820,465 L 820,252 L 780,252" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="838" y="455" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">no</text>
+<text x="20" y="715" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#52525b" text-anchor="start">One event per physical press: a single long hold from NORMAL raises Panic but cannot also Cancel.</text>
+<text x="20" y="748" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#71717a" font-style="italic">Conceptual diagram of the reference firmware in this repository - not captured data or a photo of the original prototype.</text>
+</svg>

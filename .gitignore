@@ -1,0 +1,14 @@
+# PlatformIO
+.pio/
+.vscode/
+
+# Local secrets (copy include/secrets.example.h -> include/secrets.h)
+include/secrets.h
+
+# Host test binaries
+tests/test_logic
+*.o
+
+# OS / editor
+.DS_Store
+*.swp

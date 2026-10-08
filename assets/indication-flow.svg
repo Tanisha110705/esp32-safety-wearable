@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" role="img" aria-label="LED Indication by System State">
+<title>LED Indication by System State</title>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3f3f46"/></marker></defs>
+<rect width="900" height="520" fill="#ffffff"/>
+<text x="20" y="30" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#18181b">LED Indication by System State</text>
+<rect x="40" y="80" width="240" height="90" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="160.0" y="114.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">CALIBRATING</text>
+<text x="160.0" y="130.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">yellow: blink 1 Hz</text>
+<text x="160.0" y="146.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">first 15 s after boot</text>
+<rect x="330" y="80" width="240" height="90" rx="8" fill="#eafaf0" stroke="#2f855a" stroke-width="1.6"/>
+<text x="450.0" y="114.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">NORMAL</text>
+<text x="450.0" y="130.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">green: solid (Wi-Fi up)</text>
+<text x="450.0" y="146.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">green: blink 1 Hz (Wi-Fi down)</text>
+<rect x="620" y="80" width="240" height="90" rx="8" fill="#fff7e6" stroke="#b7791f" stroke-width="1.6"/>
+<text x="740.0" y="114.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">WARNING</text>
+<text x="740.0" y="130.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">yellow: solid</text>
+<text x="740.0" y="146.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">2 of 3 conditions, no alert</text>
+<rect x="330" y="300" width="240" height="100" rx="8" fill="#fdecec" stroke="#c53030" stroke-width="1.6"/>
+<text x="450.0" y="331.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#18181b" text-anchor="middle">EMERGENCY</text>
+<text x="450.0" y="347.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">red: blink 4 Hz while sending</text>
+<text x="450.0" y="363.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">red: solid after HTTP 2xx</text>
+<text x="450.0" y="379.0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#3f3f46" text-anchor="middle">latched</text>
+<path d="M 280,125 L 330,125" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="305" y="117" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">15 s</text>
+<path d="M 570,110 L 620,110" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="595" y="102" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">&gt;= 2</text>
+<path d="M 620,145 L 570,145" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="595" y="162" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="middle">&lt; 2</text>
+<path d="M 740,170 L 740,350 L 570,350" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="750" y="260" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="start">3 of 3 for 10 s</text>
+<path d="M 420,170 L 420,300" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="400" y="240" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="end">panic</text>
+<path d="M 160,170 L 160,330 L 330,330" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="150" y="260" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="end">panic</text>
+<path d="M 500,300 L 500,170" fill="none" stroke="#3f3f46" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="510" y="240" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#52525b" text-anchor="start">cancel (hold 5 s)</text>
+<text x="20" y="460" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#52525b" text-anchor="start">Only one LED is driven at a time. Pins: green GPIO18, yellow GPIO19, red GPIO21 (reference pin map).</text>
+<text x="20" y="508" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#71717a" font-style="italic">Conceptual diagram of the reference firmware in this repository - not captured data or a photo of the original prototype.</text>
+</svg>
